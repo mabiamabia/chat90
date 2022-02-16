@@ -1,12 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="styles.css" rel="stylesheet">
+
+  <title>Chat anos 90</title>
 </head>
+
 <body>
-    
-</body>
+  <header>
+    <section>
+      <h1>Sala do grupo 2</h1>
+    </section>
+    <nav class="container-navbar">
+      <ul>
+        <a href="#" class="item">Perfil</a>
+      </ul>
+
+      <ul>
+        <a href="#" class="item">Setup</a>
+      </ul>
+
+      <ul>
+        <a href="#" class="item">Estilo</a>
+      </ul>
+
+      <ul>
+        <a href="#" class="item">Sair</a>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="quadro-principal">
+
+      <section class="user-message">
+        <strong class="user-username">
+          Fulano falou:
+        </strong>
+
+        <span>
+          mensagem
+        </span>
+      </section>
+
+      <section class="user-message">
+        <strong class="user-username">
+          Beltrano falou:
+        </strong>
+
+        <span>
+          mensagem
+        </span>
+      </section>
+
+      <section class="user-message">
+        <strong class="user-username">
+          Ciclano falou:
+        </strong>
+
+        <span>
+          mensagem
+        </span>
+      </section>
+
+    </div>
+
+    <aside class="users-list">
+      <div class="user-item-container">
+        <strong class="user-username">
+          Fulano
+        </strong>
+
+        <span class="user-status">
+          status do usuário
+        </span>
+      </div>
+
+      <div class="user-item-container">
+        <strong class="user-username">
+          Beltrano
+        </strong>
+
+        <span class="user-status">
+          status do usuário
+        </span>
+      </div>
+
+      <div class="user-item-container">
+        <strong class="user-username">
+          Ciclano
+        </strong>
+
+        <span class="user-status">
+          status do usuário
+        </span>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <div class="message-container">
+      <form action="#">
+        <input class="message-input" type="text" maxlength="240" placeholder="Insira sua mensagem aqui!" />
+        <button class="send-button">Enviar</button>
+        <section>
+          <label for="users" class="label-message">Escolha uma pessoa do chat:</label>
+          <select name="users" class="user-list">
+            <option value="fulano">Fulano</option>
+            <option value="beltrano">Beltrano</option>
+            <option value="ciclano">Ciclano</option>
+          </select>
+        </section>
+      </form>
+    </div>
+  </footer>
 </html>
