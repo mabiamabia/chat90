@@ -1,0 +1,23 @@
+.quadro-principal{
+    background-color: rgba(181, 204, 241, 0.397);
+    border-style: solid;
+    border-color: black;
+    width: 50%;
+    height: 200%;
+}
+
+.user{
+    border-bottom-style: solid;
+    border-color: black;
+    height: 1.5em;
+    font-weight: bolder;
+    background-color: rgba(82, 141, 192, 0.445);
+}
+
+.identifica-usuario{
+    font-weight: bolder;
+}
+
+p{
+    background-color: rgba(255, 255, 255, 0.445);
+}
