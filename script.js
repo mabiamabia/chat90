@@ -67,8 +67,10 @@ function getChatPeople() {
 
 function sendMessage() {
   const inputValue = inputSendMessage.value;
-
-  mountMessage("Você", inputValue);
+  
+  if (inputValue) {
+    mountMessage("Você", inputValue);
+  }
 
   inputSendMessage.value = "";
 }
