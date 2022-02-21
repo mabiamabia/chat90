@@ -19,12 +19,17 @@ header {
 }
 
 main {
-  display: grid;
-  grid-template-columns: 4fr 1fr;
-  column-gap: 32px;
   height: 100%;
   margin-bottom: 32px;
   padding: 0 30px;
+}
+
+.main-container {
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  column-gap: 32px;
 }
 
 .container-navbar {
