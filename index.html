@@ -39,6 +39,10 @@
     <section class="main-container">
       <div class="quadro-principal" id="box-messages">
   
+      </div>
+  
+      <aside class="users-list" id="user-list-container">
+        
         <section class="user-message">
           <strong class="user-username">
             Seja Bem-Vindo! Você esta online
@@ -48,43 +52,15 @@
       </div>
   
       <aside class="users-list">
-        <div class="user-item-container">
-          <strong class="user-username">
-            Renato
-          </strong>
-  
-          <span class="user-status">
-            Ausente
-          </span>
-        </div>
-  
-        <div class="user-item-container">
-          <strong class="user-username">
-            Pedro
-          </strong>
-  
-          <span class="user-status">
-            Online
-          </span>
-        </div>
-  
-        <div class="user-item-container">
-          <strong class="user-username">
-            Joana
-          </strong>
-  
-          <span class="user-status">
-            Online
-          </span>
-        </div>
+      
       </aside>
     </section>
 
 
     <div class="message-container">
-      <form action="#">
-        <input class="message-input" type="text" maxlength="240" placeholder="Insira sua mensagem aqui!" />
-        <button class="send-button">Enviar</button>
+      <div>
+        <input id="input-send-message" class="message-input" type="text" maxlength="240" placeholder="Insira sua mensagem aqui!" />
+        <button class="send-button" onclick="sendMessage()">Enviar</button>
         <section>
           <label for="users" class="label-message">Escolha uma pessoa do chat:</label>
           <select name="users" class="user-list">
@@ -93,7 +69,7 @@
             <option value="ciclano">Ciclano</option>
           </select>
         </section>
-      </form>
+      </div>
     </div>
   </main>
 

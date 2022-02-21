@@ -9,7 +9,7 @@ body {
   flex-direction: column;
   justify-content: space-around;
   background-color: rgb(212, 175, 51);
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 header {
@@ -29,9 +29,10 @@ main {
   padding: 0 30px;
 }
 
-.item{
+.item {
+  font-family: "Courier New", Courier, monospace;
   font-weight: bolder;
-  font-size:larger;
+  font-size: larger;
 }
 
 .main-container {
@@ -71,12 +72,13 @@ main {
 .quadro-principal {
   padding: 2%;
   width: 90%;
+  height: 400px;
   background-color: rgb(177, 236, 236);
   border-style: solid;
   border-radius: 1px;
   border-color: black;
-  block-size:500px
-
+  overflow-y: auto;
+  block-size: 500px;
 }
 
 .user-message {
@@ -130,5 +132,5 @@ main {
 
 strong {
   font-weight: bolder;
-  font-size:larger;
+  font-size: larger;
 }

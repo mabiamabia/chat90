@@ -1,9 +1,31 @@
 let messages = [];
+let count = 0;
 let userBoxMessages = document.querySelector("#box-messages");
+let userListContainer = document.querySelector('#user-list-container');
+let inputSendMessage = document.querySelector("#input-send-message");
 
 
-function showMessage() {
+function mountMessage(user, content) {
+  userBoxMessages.innerHTML += `
+    <section class="user-message">
+      <strong class="user-username">
+        ${user} falou:
+      </strong>
 
+      <span>
+        ${content}
+      </span>
+    </section>`;
+}
+
+
+function showMessage(messageData) {
+  mountMessage(messageData[count].userWhoSent.username, messageData[count].content);
+  count++;
+
+  if (count >= messageData.length) {
+    return count = 0;
+  }
 }
 
 function getChatMessages() {
@@ -13,22 +35,9 @@ function getChatMessages() {
   fetch(linkApi)
     .then(response => response.json())
     .then(data => {
-      messages = data;
+      count = 0;
 
-      console.log(data);
-      data.forEach(message => {
-        userBoxMessages.innerHTML += `
-          <section class="user-message">
-            <strong class="user-username">
-              ${message.userWhoSent.username} falou:
-            </strong>
-        
-            <span>
-              ${message.content}
-            </span>
-          </section>`;
-    
-      })
+      setInterval(() => showMessage(data), 2000)
     });
 }
 
@@ -38,17 +47,34 @@ function getChatPeople() {
   fetch(linkApi)
     .then(response => response.json())
     .then(data => {
-      console.log(data);
+      data.forEach(user => {
+        userListContainer.innerHTML += `
+          <div class="user-item-container">
+            <strong class="user-username">
+              ${user.name}
+            </strong>
+    
+            <span class="user-status">
+              ${user.status}
+            </span>
+          </div>
+        `;
+
+      })
     })
+
 }
 
 function sendMessage() {
+  const inputValue = inputSendMessage.value;
+  
+  if (inputValue) {
+    mountMessage("Você", inputValue);
+  }
 
+  inputSendMessage.value = "";
 }
 
-// Criar função de enviar
-
-setInterval(getChatMessages, 1000);
-
-sendMessage();
 getChatMessages();
+sendMessage();
+getChatPeople();
