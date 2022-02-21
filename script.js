@@ -1,9 +1,27 @@
 let messages = [];
+let count = 0;
 let userBoxMessages = document.querySelector("#box-messages");
 
 
-function showMessage() {
+function showMessage(messageData) {
+  console.log(count)
+  userBoxMessages.innerHTML += `
+    <section class="user-message">
+      <strong class="user-username">
+        ${messageData[count].userWhoSent.username} falou:
+      </strong>
 
+      <span>
+        ${messageData[count].content}
+      </span>
+    </section>`;
+
+  count++;
+
+  if (count >= messageData.length) {
+    console.log('aqui')
+    return count = 0;
+  }
 }
 
 function getChatMessages() {
@@ -13,22 +31,13 @@ function getChatMessages() {
   fetch(linkApi)
     .then(response => response.json())
     .then(data => {
-      messages = data;
+      count = 0;
 
-      console.log(data);
-      data.forEach(message => {
-        userBoxMessages.innerHTML += `
-          <section class="user-message">
-            <strong class="user-username">
-              ${message.userWhoSent.username} falou:
-            </strong>
-        
-            <span>
-              ${message.content}
-            </span>
-          </section>`;
-    
-      })
+      let messageLength = data.length;
+
+      setInterval(() => showMessage(data), 1000)
+
+      
     });
 }
 
@@ -48,7 +57,7 @@ function sendMessage() {
 
 // Criar função de enviar
 
-setInterval(getChatMessages, 1000);
+getChatMessages();
 
 sendMessage();
 getChatMessages();
