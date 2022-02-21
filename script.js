@@ -6,6 +6,8 @@ function getChatMessages() {
     .then(data => {
       console.log(data);
     })
+
+  
 }
 
 function getChatPeople() {
@@ -19,7 +21,7 @@ function getChatPeople() {
 }
 
 function sendMessage() {
-  
+
 }
 
 // Criar função de enviar
