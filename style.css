@@ -18,6 +18,11 @@ header {
   margin: 1%;
 }
 
+h1{
+  text-shadow:  0.2em 0.1em rgb(177, 236, 236) ;
+  font-size: xx-large; 
+}
+
 main {
   height: 100%;
   margin-bottom: 32px;
