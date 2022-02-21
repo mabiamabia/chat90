@@ -18,5 +18,11 @@ function getChatPeople() {
     })
 }
 
+function sendMessage() {
+  
+}
+
+// Criar função de enviar
+sendMessage();
 getChatPeople()
 getChatMessages();
