@@ -1,43 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="style.css" rel="stylesheet" />
-    <title>Chat Anos 90</title>
-  </head>
-  <body>
-    <!-- Campo de texto do chat geral-->
-    <div class="quadro-principal">
-        <div class="user">Para: Joelma</div>
-        <!-- conversa1 -->
-            <div class="conversa">
-                    <div>
-                      <div class="offline">
-                      </div>  
-                        <p class="identifica-usuario">Mabiá disse:</p>
-                        <p>13:58</p>
-                        <p>
-                            Interessantiss quisso pudia ce receita de bolis, 
-                            mais bolis eu num gostis &#128540;
-                        </p>
-                    </div>
-            </div>
-        <!-- fim da conversa1 -->
-        <!-- conversa2 -->
-                <div>
-                    <div class="online">
-                    </div>
-                    <p class="identifica-usuario">Joelma disse:</p>
-                    <p>21:33</p>
-                    <p>
-                        Interessantiss quisso pudia ce receita de bolis, 
-                        mais bolis eu num gostis &#128514 &#128514; Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio.Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus.A ordem dos tratores não altera o pão duris.
-                    </p>
-                </div>
-    <!-- fim da conversa2 -->
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+
+  <title>Chat anos 90</title>
+</head>
+
+<body>
+  <header>
+    <section>
+      <h1>Chat anos 90</h1>
+    </section>
+    <nav class="container-navbar">
+      <ul>
+        <a href="#" class="item">Perfil</a>
+      </ul>
+
+      <ul>
+        <a href="#" class="item">Setup</a>
+      </ul>
+
+      <ul>
+        <a href="#" class="item">Estilo</a>
+      </ul>
+
+      <ul>
+        <a href="#" class="item">Sair</a>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="main-container">
+      <div class="quadro-principal" id="box-messages">
+  
+      </div>
+  
+      <aside class="users-list" id="user-list-container">
+        
+        <section class="user-message">
+          <strong class="user-username">
+            Seja Bem-Vindo! Você esta online
+          </strong>
+        </section>
+
+      </div>
+  
+      <aside class="users-list">
+      
+      </aside>
+    </section>
+
+
+    <div class="message-container">
+      <div>
+        <input id="input-send-message" class="message-input" type="text" maxlength="240" placeholder="Insira sua mensagem aqui!" />
+        <button class="send-button" onclick="sendMessage()">Enviar</button>
+        <section>
+          <label for="users" class="label-message">Escolha uma pessoa do chat:</label>
+          <select name="users" class="user-list">
+            <option value="fulano">Fulano</option>
+            <option value="beltrano">Beltrano</option>
+            <option value="ciclano">Ciclano</option>
+          </select>
+        </section>
+      </div>
     </div>
-    <!-- Fim do campo de texto do chat geral-->
+  </main>
+
+
+  <script src="script.js"></script>
   </body>
 </html>
