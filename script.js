@@ -2,20 +2,25 @@ let messages = [];
 let count = 0;
 let userBoxMessages = document.querySelector("#box-messages");
 let userListContainer = document.querySelector('#user-list-container');
+let inputSendMessage = document.querySelector("#input-send-message");
 
 
-function showMessage(messageData) {
+function mountMessage(user, content) {
   userBoxMessages.innerHTML += `
     <section class="user-message">
       <strong class="user-username">
-        ${messageData[count].userWhoSent.username} falou:
+        ${user} falou:
       </strong>
 
       <span>
-        ${messageData[count].content}
+        ${content}
       </span>
     </section>`;
+}
 
+
+function showMessage(messageData) {
+  mountMessage(messageData[count].userWhoSent.username, messageData[count].content);
   count++;
 
   if (count >= messageData.length) {
@@ -61,10 +66,12 @@ function getChatPeople() {
 }
 
 function sendMessage() {
+  const inputValue = inputSendMessage.value;
 
+  mountMessage("Você", inputValue);
+
+  inputSendMessage.value = "";
 }
-
-// Criar função de enviar
 
 getChatMessages();
 sendMessage();

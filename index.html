@@ -48,9 +48,9 @@
 
 
     <div class="message-container">
-      <form action="#">
-        <input class="message-input" type="text" maxlength="240" placeholder="Insira sua mensagem aqui!" />
-        <button class="send-button">Enviar</button>
+      <form>
+        <input id="input-send-message" class="message-input" type="text" maxlength="240" placeholder="Insira sua mensagem aqui!" />
+        <button class="send-button" onclick="sendMessage()">Enviar</button>
         <section>
           <label for="users" class="label-message">Escolha uma pessoa do chat:</label>
           <select name="users" class="user-list">
