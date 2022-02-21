@@ -19,7 +19,7 @@ header {
 }
 
 h1{
-  text-shadow:  0.2em 0.1em rgb(177, 236, 236) ;
+  text-shadow:  0.2em 0.1em rgb(177, 236, 236);
   font-size: xx-large; 
 }
 
@@ -56,13 +56,15 @@ main {
 }
 
 .container-navbar a:hover {
-  color: rgb(83, 52, 218);
+  color: rgb(177, 236, 236);
 }
 
 .users-list {
-  background-color: rgb(218, 211, 211);
-  padding: 8px;
-  border-radius: 8px;
+  background-color: rgb(208, 145, 214);
+  border-style: solid;
+  border-color: black;
+  border-radius: 0.5px;
+  margin: px;
 }
 
 .user-item-container {
@@ -98,7 +100,7 @@ main {
   background-color: rgb(151, 189, 208);
   background-image: linear-gradient(
     to bottom right,
-    rgb(136, 164, 220),
+    rgb(84, 128, 216),
     rgb(125, 125, 120)
   );
 }
